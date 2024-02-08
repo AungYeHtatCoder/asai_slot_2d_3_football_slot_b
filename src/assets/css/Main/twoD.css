@@ -1,0 +1,86 @@
+.startProfile{
+    background: linear-gradient(6deg, rgba(102, 0, 149, 1) 0%, rgba(52, 0, 87, 1) 56%);
+    border: 1px solid purple;
+    cursor: pointer;
+}
+.startProfile span{
+    font-size: 14px;
+}
+.dSubNav,.twoDList{
+    background: linear-gradient(90deg, rgba(166, 0, 255, 1) 0%, rgba(110, 3, 162, 1) 50%, rgba(157, 2, 218, 1) 100%);
+}
+.twoDBetBtn{
+    background: linear-gradient(90deg, rgba(166, 0, 255, 1) 0%, rgba(110, 3, 162, 1) 50%, rgba(157, 2, 218, 1) 100%);
+    border: 1px solid #ff00fb;
+}
+.twoDResult{
+    border: 10px dashed rgb(179, 5, 179);
+}
+.modal{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.modal-content{
+    width: 350px;
+    margin:50px auto;
+}
+.twoDBetHistory .nav-link{
+    color: #fff !important;
+    background: linear-gradient(6deg, rgba(102, 0, 149, 1) 0%, rgba(52, 0, 87, 1) 56%);
+    border-radius: 0 !important;
+    padding: 10px 20px !important;
+    border: 1px solid purple;
+}
+.twoDBetHistory .nav-link:hover{
+    border:0 0 inherit 0 !important;
+}
+.twoDBetHistory .nav-tabs{
+    border-bottom: 0 !important;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.twoDBetHistory .nav-tabs .nav-link.active {
+    border: none;
+    border-bottom: 5px dashed rgb(215, 4, 215);
+}
+.betContainer{
+    background: linear-gradient(90deg, rgba(166, 0, 255, 1) 0%, rgba(110, 3, 162, 1) 50%, rgba(157, 2, 218, 1) 100%);
+}
+.twoDWinnerInfo{
+    background: linear-gradient(6deg, rgba(102, 0, 149, 1) 0%, rgba(52, 0, 87, 1) 56%);
+    border: 1px solid purple;
+    cursor: pointer;
+}
+@media screen and (max-width:440px) {
+    .topWinnerCard small{
+        font-size: 12px;
+    }
+    .topWinnerCard h6{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:390px) {
+    .modal-content{
+        width: 280px;
+    }
+}
+@media screen and (max-width:360px) {
+    .startProfile span{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:320px){
+    .twoDBetHistory .nav-link{
+        padding: 10px  !important;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:300px) {
+    .modal-content{
+        width: 260px;
+    }
+}

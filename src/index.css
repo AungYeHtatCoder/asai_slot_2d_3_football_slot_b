@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body{
+    background-image: url('./assets/img/bg.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden !important;
+    color: white;
+    padding-bottom: 100px ;
+}

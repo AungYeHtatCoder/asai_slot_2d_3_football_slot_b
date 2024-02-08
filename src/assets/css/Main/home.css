@@ -1,0 +1,45 @@
+.home{
+    width: 100%;
+}
+.mainSwiper{
+    height: 250px;
+    border: 1px solid #d188fb;
+    box-shadow: 1px 2px 3px #b93fff;
+}
+.mainSwiper img{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+}
+marquee{
+    background-color: #000;
+    border: 1px solid #d188fb;
+    color: #fff;
+    margin-top: 10px;
+    line-height: 40px;
+}
+.mainLinkBtn{
+    background: linear-gradient(6deg, rgba(102, 0, 149, 1) 0%, rgba(52, 0, 87, 1) 56%);
+   border:1px solid purple;
+    box-shadow: 1px 2px 3px #b93fff;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+.mainLinkBtn button{
+    background: transparent;
+    border: none;
+    color: white;
+}
+@media screen and (min-width:770px) {
+    .home{
+        width: 375px;
+        margin: auto;
+    }
+}
+@media screen and (max-width:450px){
+    .mainSwiper{
+        height: 250px;
+    }
+}

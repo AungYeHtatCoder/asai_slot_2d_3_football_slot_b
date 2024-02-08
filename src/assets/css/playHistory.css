@@ -1,0 +1,35 @@
+.playHistoryTitle{
+    background-color: #383838;
+    background-image: url('../img/promotion.svg');
+    border: 2px solid #fff;
+    cursor: pointer;
+    margin: 30px auto;
+    width: 80%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+}
+.playHistoryTable{
+    background: #23192E;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+@media screen and (max-width:630px) {
+    .playHistoryTable{
+        width: 95%;
+    }
+}
+@media screen and (max-width:400px) {
+    .playHistoryTable{
+        padding: 10px;
+        font-size: 14px !important;
+        overflow-x: scroll ;
+
+    }
+    .playHistoryTable .form-select{
+        padding: 4px !important;
+        font-size: 14px !important;
+    }
+}

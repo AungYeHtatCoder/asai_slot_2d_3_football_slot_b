@@ -1,0 +1,148 @@
+.topupHeader {
+  background-color: #383838;
+  background-image: url('../img/promotion.svg');
+  max-width: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.topupCard {
+  background: linear-gradient(
+    180deg,
+    rgba(162, 64, 227, 1) 0%,
+    rgba(75, 21, 122, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 25px 45px;
+  max-width: 50%;
+}
+
+.topupText {
+  font-size: 19px;
+  font-weight: 200;
+  color: rgb(226, 194, 11);
+}
+
+.bankImg {
+  width: 13%;
+  height: 13%;
+}
+
+.viber {
+  background: #a240e3;
+  max-width: max-content;
+}
+
+.topupBank {
+  background: #383838;
+  color: white;
+  border: 1px solid goldenrod;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 25px 45px;
+}
+
+.topupForm {
+  background: #383838;
+  color: white;
+  border: 1px solid goldenrod;
+  border-radius: 15px;
+  min-height: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 25px 45px;
+}
+
+.bankCard {
+  border: 1px solid goldenrod;
+}
+
+.copy {
+  background: linear-gradient(
+    45deg,
+    rgba(233, 230, 111, 1) 8%,
+    rgba(142, 141, 55, 1) 32%,
+    rgba(230, 211, 90, 1) 77%
+  );
+  color: #000;
+  color: #000;
+}
+
+.btnWhite {
+  background: white;
+  border: 1px solid #fff;
+  color: #000;
+}
+
+.topupBtn {
+  background: linear-gradient(
+    45deg,
+    rgba(233, 230, 111, 1) 8%,
+    rgba(142, 141, 55, 1) 32%,
+    rgba(230, 211, 90, 1) 77%
+  );
+  color: #000;
+  margin-left: 80px;
+}
+
+.topupMain {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .topupHeader {
+    max-width: 75%;
+  }
+  .topupCard {
+    max-width: 75%;
+  }
+}
+@media screen and (max-width: 944px) {
+  .topupHeader {
+    max-width: 80%;
+  }
+  .topupCard {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 817px) {
+  .topupHeader {
+    max-width: 80%;
+  }
+  .topupCard {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 732px) {
+  .topupHeader {
+    max-width: 85%;
+  }
+  .topupCard {
+    max-width: 85%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .topupMain {
+    display: block;
+    margin-left: 60px;
+  }
+  .viber {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .topupHeader {
+    max-width: 85%;
+  }
+  .topupCard {
+    max-width: 85%;
+  }
+  .topupMain {
+    display: block;
+    margin-left: 30px;
+  }
+  .viber {
+    display: block;
+  }
+}

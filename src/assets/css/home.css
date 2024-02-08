@@ -1,0 +1,82 @@
+@media (min-width:500) and (min-width:768px) {
+    .home-div{
+        background-color: #000;
+        border-radius: 15px;
+        box-shadow: rgb(173, 89, 173) 0px 5px 15px;
+        
+        padding: 100px;
+        position: relative;
+    }
+
+    .first-div{
+        max-width: 500px;
+        position: absolute;
+        top: -20%;
+        left: 30%;
+    }
+}
+
+@media screen and (min-width:501px) {
+    .menus{
+        width: 150px;
+        height: 150px;
+        border-radius: 15px;
+        padding: 10px;
+        border: 2px solid rgb(173, 89, 173);
+        margin: 0 3px;
+        text-decoration: none;
+    }
+    
+    .menu-img{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .menus{
+        width: 80px;
+        height: 100px;
+        flex-wrap: wrap;
+        border-radius: 15px;
+        padding: 10px;
+        border: 2px solid rgb(173, 89, 173);
+        margin: 0 3px;
+        text-decoration: none;
+    }
+
+    .menu-titles{
+        font-size: 12px;
+    }
+
+
+    
+.menu-img{
+    width: 50px;
+    height: 50px;
+}
+}
+@media screen and (max-width:370px){
+    .first-div{
+        max-width: 300px;
+        margin: auto;
+    }
+}
+@media screen and (max-width:310px){
+    .first-div{
+        max-width: 280px;
+        margin: auto;
+    }
+}
+.first-div{
+    background-color: #111;
+    border: 1px solid rgb(173, 89, 173);
+    border-radius: 20px;
+
+}
+
+
+.menus:hover{
+    border: none;
+    box-shadow: rgb(255, 191, 73) 1px 1px 15px;
+}

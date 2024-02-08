@@ -1,0 +1,10 @@
+.register{
+    background: linear-gradient(182deg,#6831ab,#1f0e41),url('../img/login.png') 50%;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0.3rem 0.3rem 5rem rgb(0 0 0), 0 0 0.8rem #fff, 0 0 1.8rem #1e0204, inset 0 0 1.3rem #000;    border: 1px solid #fff;
+    border-radius: 15px;
+    width: 50%;
+}
+.form-control{
+    background: #050B17 !important;
+    color: #fff !important;
+}

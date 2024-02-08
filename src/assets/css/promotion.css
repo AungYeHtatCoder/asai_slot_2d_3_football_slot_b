@@ -1,0 +1,12 @@
+.promotionHeader{
+    background-color: #383838;
+    background-image: url('../img/promotion.svg');
+    max-width: max-content;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+.promotionImg{
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}

@@ -1,0 +1,32 @@
+.profileInfo{
+    background: linear-gradient(6deg, rgba(102, 0, 149, 1) 0%, rgba(52, 0, 87, 1) 56%);
+    border:1px solid purple;
+    cursor: pointer;
+}
+.walletBankUnactive{
+    opacity: .5;
+}
+.walletBankActive{
+    opacity: 1;
+} 
+input{
+    background: #fff !important;
+    color: #000 !important;
+}
+.form-control:focus,.form-control{
+    color: #000 !important;
+    background: #fff !important;
+}
+.amount{
+    border: 1px solid purple;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.continueBtn{
+    border-radius: 8px;
+    text-align: center;
+    background: linear-gradient(6deg, rgba(102, 0, 149, 1) 0%, rgba(52, 0, 87, 1) 56%);
+    border:1px solid purple;
+    color: white;
+    cursor: pointer;
+}

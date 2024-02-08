@@ -1,0 +1,31 @@
+header{
+    background: linear-gradient(182deg,#6831ab,#1f0e41),url(/images/007.jpeg)50%;
+    box-shadow: 0 0 10px #000!important;
+}
+header img{
+    height: 60px;
+    width: auto;
+}
+.btn-close{
+    --bs-btn-close-bg: url('../img/closeBtn.png') !important;
+    background-image: url('../img/closeBtn.png') !important;
+    width: 40px !important;
+    height: 40px !important; 
+}
+.navLoginBtn{
+    background-image: linear-gradient(180deg,#3a3a3a,#101010),linear-gradient(125deg,#ffeed0,#a6761e 31.53%,#fff0d4 64.87%,#ffd382) !important;
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid gold !important;
+    padding: 5px 10px !important;
+    font-size: 16px !important;
+    width: max-content !important;
+    font-weight: 400 !important;
+}
+.navRegisterBtn{
+    background-image: radial-gradient(100% 100% at 50% 0,#c69dff 0,#6b29bc 44%,#34185f 100%),linear-gradient(180deg,#fbb21f,#ffc107);
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid gold;
+    padding: 5px 10px;
+}

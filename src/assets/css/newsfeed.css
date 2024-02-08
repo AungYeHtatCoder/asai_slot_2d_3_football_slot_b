@@ -1,0 +1,90 @@
+.horizontalLine{
+    height: 2px;
+    background: #fff;
+    width: 100%;
+    box-shadow: -2px -20px 34px 0px rgba(223, 232, 146, 0.75);
+    -webkit-box-shadow: -2px -20px 34px 0px rgba(223, 232, 146, 0.75);;
+    -moz-box-shadow: -2px -20px 14px 0px rgba(223, 232, 146, 0.75);
+}
+.logo{
+    height: 200px;
+    width: 50%;
+   vertical-align: middle;
+   object-fit: cover;
+}
+.gameLayout{
+    height: 100%;
+    width: 100%;
+}
+.gameLogo{
+    height: 200px;
+    width: auto;
+}
+.section2 .content{
+    background: rgba(0, 0, 0, 0.48);
+}
+.tag{
+    cursor: pointer;
+    font-size: .875rem;
+    color: #fbfbfb;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    padding: 5px 15px;
+    border-radius: 18px;
+    background: #464646;
+    transition: all .2s ease-in-out;
+}
+.tag:hover{
+    background: #595959;
+}
+@media  screen  and (max-width:800px){
+    .gameFooter h5{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:768px){
+    .gameLayout{
+        height: 300px;
+        width: auto;
+    }
+}
+@media screen and (max-width:660px) {
+    .bank{
+        height: 60px;
+    }
+}
+@media screen and (max-width:630px) {
+    .logo{
+        width: 80%;
+    }
+}
+@media screen and (max-width:530px) {
+    .gameFooter h5{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:510px) {
+    .bank{
+        height: 50px;
+    }
+}
+@media screen and (max-width:450px) {
+    .logo{
+        width: 95%;
+    }
+}
+@media screen and (max-width:440px) {
+    .bank{
+        height: 40px;
+    }
+}
+@media screen and (max-width:360px) {
+    .logo,.gameLogo{
+        height: 160px;
+    }
+}
+@media screen and (max-width:350px) {
+    .bank{
+        height: 30px;
+    }
+}
