@@ -43,7 +43,7 @@ export default function (props) {
 
             <div className="text-center">
               Not registered yet?{" "}
-              <span className="text-white" onClick={changeAuthMode}>
+              <span className="text-primary" onClick={changeAuthMode}>
                 Sign Up
               </span>
             </div>
