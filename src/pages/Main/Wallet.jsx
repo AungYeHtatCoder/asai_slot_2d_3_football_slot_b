@@ -9,8 +9,8 @@ import { NavLink } from 'react-router-dom';
 
 const WalletPage = () => {
     const walletOptions=[
-        {id:1,icon:<FaMoneyBill size={26} />,title:'ငွေဖြည့်',link:'/top-up'},
-        {id:2,icon:<FaMoneyBillTransfer size={26} />,title:'ငွေထုတ်',link:'/with-draw'},
+        {id:1,icon:<FaMoneyBill size={26} />,title:'ငွေဖြည့်',link:'/lotto/top-up'},
+        {id:2,icon:<FaMoneyBillTransfer size={26} />,title:'ငွေထုတ်',link:'/lotto/with-draw'},
         {id:3,icon:<MdWallet size={26} />,title:'ဂိမ်းပိုက်ဆံအိတ်',link:''},
         {id:4,icon:<FaClipboardList size={26} />,title:'မှတ်တမ်း',link:''},
     ]

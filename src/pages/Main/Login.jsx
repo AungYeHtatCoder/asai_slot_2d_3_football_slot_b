@@ -1,6 +1,7 @@
 
 import React, { useState } from "react"
 import banner from '../../assets/img/Main/home/banner.png'
+import { NavLink } from "react-router-dom"
 
 export default function (props) {
   let [authMode, setAuthMode] = useState("signup")
@@ -43,9 +44,9 @@ export default function (props) {
 
             <div className="text-center">
               Not registered yet?{" "}
-              <span className="text-primary" onClick={changeAuthMode}>
-                Sign Up
-              </span>
+              <NavLink to={'/lotto/register'} className="text-primary" onClick={changeAuthMode}>
+                Register
+              </NavLink>
             </div>
           </div>
         </form>

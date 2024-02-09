@@ -45,7 +45,7 @@ const TwoDBet = () => {
       </div>
      {twoDSelectedNumbers.length>0 && <>
       <div className="col-6  col-sm-4">
-          <NavLink to='/2d/twodcomfirm' >
+          <NavLink to='/lotto/2d/twodcomfirm' >
           <Button className='text-white' style={{background:' linear-gradient(6deg, rgba(102, 0, 149, 1) 0%, rgba(52, 0, 87, 1) 56%)'}}  >ထိုးမည်</Button>
           </NavLink>
         </div>

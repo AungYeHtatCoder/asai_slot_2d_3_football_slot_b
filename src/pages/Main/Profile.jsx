@@ -20,8 +20,8 @@ const Profile = ()=>{
         </div>
         
         <div className="my-4">
-            <NavLink to={'/top-up'} ><button type="button" className="btn btn-outline-secondary p-2 mx-2">ငွေသွင်းမည်</button></NavLink>
-           <NavLink to={'/with-draw'}>
+            <NavLink to={'/lotto/top-up'} ><button type="button" className="btn btn-outline-secondary p-2 mx-2">ငွေသွင်းမည်</button></NavLink>
+           <NavLink to={'/lotto/with-draw'}>
            <button type="button" className="btn btn-outline-success p-2 mx-2">ငွေထုတ်မည်</button>
            </NavLink>
         </div>
@@ -35,7 +35,7 @@ const Profile = ()=>{
         </div>
 
         <div className="my-4">
-            <Link to="/change-password" type="button" className="btn btn-outline-secondary p-2 mx-2">Change Password</Link>
+            <Link to="/lotto/change-password" type="button" className="btn btn-outline-secondary p-2 mx-2">Change Password</Link>
             <button type="button" className="btn btn-outline-success p-2 mx-2">Update Profile</button>
         </div>
     </Form>

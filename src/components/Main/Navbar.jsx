@@ -8,10 +8,10 @@ const Navbar = () => {
   const location=useLocation();
   return (
     <div className='mb-4 navbar p-4 d-flex justify-content-between align-items-center'>
-      {location.pathname!=='/' && <GrLinkPrevious onClick={()=>history.back()} size={30} />}
-      <NavLink to={'/'} className='text-decoration-none text-light' ><h5>Delight 2D | 3D</h5></NavLink>
+      {location.pathname!=='/lotto' && <GrLinkPrevious onClick={()=>history.back()} size={30} />}
+      <NavLink to={'/lotto'} className='text-decoration-none text-light' ><h5>Delight 2D | 3D</h5></NavLink>
       {/* <IoNotificationsSharp size={25} /> */}
-      <NavLink to={'/login'} className="btn px-3 rounded text-white" style={{border:'1px solid #a202ff'}}>Register</NavLink>
+      <NavLink to={'/lotto/login'} className="btn px-3 rounded text-white" style={{border:'1px solid #a202ff'}}>Login</NavLink>
     </div>
   )
 }

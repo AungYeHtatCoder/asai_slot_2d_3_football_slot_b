@@ -11,9 +11,9 @@ import TwoDBetButton from '../../components/Main/TwoDBetButton';
 
 const TwoD = () => {
     const twoDSubNav=[
-        {id:1,icon:<FaClipboardList/>,title:'မှတ်တမ်း',link:'/2d/bet-history'},
-        {id:2,icon:<FaStar/>,title:'ကံထူးရှင်များ',link:'/2d/winners'},
-        {id:3,icon:<FaCalendarAlt/>,title:'ပိတ်ရက်',link:'/2d/holiday'}
+        {id:1,icon:<FaClipboardList/>,title:'မှတ်တမ်း',link:'/lotto/2d/bet-history'},
+        {id:2,icon:<FaStar/>,title:'ကံထူးရှင်များ',link:'/lotto/2d/winners'},
+        {id:3,icon:<FaCalendarAlt/>,title:'ပိတ်ရက်',link:'/lotto/2d/holiday'}
     ];
     const twoDListsArray=[
         {id:1,time:'11:00:00',set:1376.22,value:13059.18,twoD:29},
