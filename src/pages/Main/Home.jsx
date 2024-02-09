@@ -16,7 +16,7 @@ const Home = () => {
   const btnLinks=[
     {id:1,title:'2D',link:'/lotto/2d/twoD'},
     {id:2,title:'3D',link:'/lotto/3d/threeD'},
-    {id:3,title:'ဘောလုံး',link:'https://golden-horse-67e078.netlify.app/login'},
+    {id:3,title:'ဘောလုံး',link:'/'},
     {id:4,title:'စလော့',link:'/'},
   ]
   return (
