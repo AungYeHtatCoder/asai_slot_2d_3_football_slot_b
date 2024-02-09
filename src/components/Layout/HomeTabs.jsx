@@ -34,7 +34,7 @@ const HomeTabs = () => {
         {id:2,img:casino,title:'casino',link:'?tab=2'},
         {id:3,img:lotto,title:'lotto',link:'/lotto'},
         {id:4,img:slot,title:'slot',link:'?tab=4'},
-        {id:5,img:sport,title:'sport',link:'https://golden-horse-67e078.netlify.app/'},
+        {id:5,img:sport,title:'sport',link:'/'},
         {id:6,img:viber,title:'viber',link:'/'},
         {id:7,img:telegram,title:'telegram',link:'/'}
     ];
