@@ -141,7 +141,7 @@ const ThreeDBetPage = () => {
           </tbody>
       </Table>
       
-      <NavLink to={'/3d/threedConfirm'}>
+      <NavLink to={'/lotto/3d/threedConfirm'}>
         <button className='ms-4 btn p-2 rounded-xl w-max my-2 text-white' style={{background:' linear-gradient(6deg, rgba(102, 0, 149, 1) 0%, rgba(52, 0, 87, 1) 56%)'}}  >ထိုးမည်</button>
       </NavLink>
     </div>

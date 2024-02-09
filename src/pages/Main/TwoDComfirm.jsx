@@ -198,7 +198,7 @@ const TwoDComfirm = ()=>{
         </tbody>
         </Table>}
         <Button disabled={userTwodData.length<1} style={{background:' linear-gradient(6deg, rgba(102, 0, 149, 1) 0%, rgba(52, 0, 87, 1) 56%)'}} >
-        <NavLink to='/bet-history' style={{background:'none'}} className=' text-decoration-none text-white btn'   onClick={twodStoreData}>ထိုးမည်</NavLink>
+        <NavLink to='/lotto/bet-history' style={{background:'none'}} className=' text-decoration-none text-white btn'   onClick={twodStoreData}>ထိုးမည်</NavLink>
         </Button>
      </div>
     </>

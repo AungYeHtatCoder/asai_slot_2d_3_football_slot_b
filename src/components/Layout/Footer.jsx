@@ -16,14 +16,14 @@ const Footer = () => {
   const footerBeforeLogin=[
     {id:1,img:login,link:'/slots/login',title:"လော့ဂ်အင်"},
     {id:2,img:promotion,link:'/slots/promotion',title:"ပရိုမိုးရှင်း"},
-    {id:3,img:menu,link:'/slots/',title:"",isMiddle:true},
+    {id:3,img:menu,link:'/',title:"",isMiddle:true},
     {id:4,img:register,link:'/slots/register',title:"မှတ်ပုံတင်"},
-    {id:5,img:viber,link:'/slots',title:"Viber"},
+    {id:5,img:viber,link:'/',title:"Viber"},
   ];
   const footerAfterLogin=[
-    {id:1,img:home,link:'/slots',title:"အိမ်"},
+    {id:1,img:home,link:'/',title:"အိမ်"},
     {id:2,img:deposit,link:'/slots/topup',title:"ငွေသွင်း"},
-    {id:3,img:menu,link:'/slots/',title:"",isMiddle:true},
+    {id:3,img:menu,link:'/',title:"",isMiddle:true},
     {id:4,img:withDraw,link:'/slots/withdraw',title:"ငွေထုတ်"},
     {id:5,img:promotion2,link:'/slots/promotion',title:"ပရိုမိုးရှင်း"},
   ];

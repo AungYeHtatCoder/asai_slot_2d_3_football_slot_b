@@ -30,13 +30,13 @@ import { NavLink } from 'react-router-dom';
 const HomeTabs = () => {
   const [searchParams]=useSearchParams();
     const tabs = [
-        {id:1,img:home,title:'home',link:'/slots?tab=1'},
-        {id:2,img:casino,title:'casino',link:'/slots?tab=2'},
-        {id:3,img:lotto,title:'lotto',link:'/slots?tab=3'},
-        {id:4,img:slot,title:'slot',link:'/slots?tab=4'},
-        {id:5,img:sport,title:'sport',link:'/slots?tab=5'},
-        {id:6,img:viber,title:'viber',link:'/slots'},
-        {id:7,img:telegram,title:'telegram',link:'/slots'}
+      {id:1,img:home,title:'home',link:'?tab=1'},
+      {id:2,img:casino,title:'casino',link:'?tab=2'},
+      {id:3,img:lotto,title:'lotto',link:'/lotto'},
+      {id:4,img:slot,title:'slot',link:'?tab=4'},
+      {id:5,img:sport,title:'sport',link:'https://golden-horse-67e078.netlify.app/'},
+      {id:6,img:viber,title:'viber',link:'/'},
+      {id:7,img:telegram,title:'telegram',link:'/'}
     ];
     const homeContents=[
       {id:1,img:bbincasino,title:'bbincasino'},
@@ -50,23 +50,23 @@ const HomeTabs = () => {
     const casinoContents=[
       {id:1,img:bbincasino,title:'bbincasino'},
     ]
-    const lottoContents=[
-      {id:1,img:lotto1,title:'lotto1'},
-      {id:2,img:lotto3,title:'lotto3'},
-    ]
+    // const lottoContents=[
+    //   {id:1,img:lotto1,title:'lotto1'},
+    //   {id:2,img:lotto3,title:'lotto3'},
+    // ]
     const slotContents=[
       {id:1,img:slot1,title:'slot1'},
       {id:2,img:slot2,title:'slot2'},
     ]
-    const sportContents=[
-      {id:1,img:sport1,title:'sport1'},
-      {id:2,img:sport2,title:'sport2'},
-    ]
+    // const sportContents=[
+    //   {id:1,img:sport1,title:'sport1'},
+    //   {id:2,img:sport2,title:'sport2'},
+    // ]
    
     
     return (
     <div className='px-2 ' >
-        <Tab.Container id="left-tabs-example"  defaultActiveKey={Number(searchParams.get('tab'))|| 1} >
+        <Tab.Container id="left-tabs-example"  defaultActiveKey={'1'} >
       <Row>
         <Col xs={3} md={2}>
           <Nav variant="pills" className="flex-column  pt-4" style={{minHeight:'100vh'}}>
@@ -127,7 +127,7 @@ const HomeTabs = () => {
                     })}
                     </div>
                     </Tab.Pane>
-                    <Tab.Pane className='container ' eventKey={3}>
+                    {/* <Tab.Pane className='container ' eventKey={3}>
                     <div className="row">
                     {lottoContents.map((data)=>{
                       return <div className='col-12 col-sm-6  col-lg-4 col-xl-4 my-2 '>
@@ -146,7 +146,7 @@ const HomeTabs = () => {
                       </div>
                     })}
                     </div>
-                    </Tab.Pane>
+                    </Tab.Pane> */}
                     
                  
           </Tab.Content>

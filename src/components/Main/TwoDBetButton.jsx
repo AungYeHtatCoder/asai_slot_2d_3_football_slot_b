@@ -26,7 +26,7 @@ function TwoDBetButton() {
         </Modal.Header>
         <Modal.Body className='d-flex flex-column gap-3'>
             {betTimes.map((time)=>{
-                return <NavLink onClick={()=>setTwoDTime(time)} to={'/2d/twodbet'} style={{width:'100%'}} >
+                return <NavLink onClick={()=>setTwoDTime(time)} to={'/lotto/2d/twodbet'} style={{width:'100%'}} >
                    <Button  style={{width:'100%'}} variant="outline-primary">{time}</Button>
                 </NavLink> 
             })}

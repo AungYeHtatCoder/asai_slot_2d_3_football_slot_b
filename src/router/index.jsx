@@ -39,124 +39,125 @@ import TwoDComfirm from '../pages/Main/TwoDComfirm';
 import ThreeDConfirm from '../pages/Main/ThreeDConfirm';
 
 const router = createBrowserRouter([
-  // For Main Routes 
+  // For Lotto(2d,3d) Routes (*Import from Main folder*)
   {
-    path:'/',
+    path:'/lotto',
     element:<MainLayout/>,
     children:[
       {
-       path:'/',
+      index:true,
         element: <Home />,
       },
       {
-        path:'/login',
+        path:'login',
          element: <Login />,
        },
+
       {
-        path:'/wallet',
+        path:'wallet',
          element: <WalletPage />,
        },
        {
-        path:'/top-up',
+        path:'top-up',
          element: <TopUpPage />,
        },
        {
-        path:'/with-draw',
+        path:'with-draw',
          element: <WithDrawPage />,
        },
       {
-        path:'/service-phone',
+        path:'service-phone',
          element: <ServicePhone />,
        },
        {
-        path:'/promotion',
+        path:'promotion',
         element:<Promotion/>
        },
        {
-        path:'/promotiondetail',
+        path:'promotiondetail',
         element:<PromotionDetail/>
        },
        {
-        path:'/2d/twoD',
+        path:'2d/twoD',
         element:<TwoD/>
        },
        {
-        path:'/2d/twodbet',
+        path:'2d/twodbet',
         element:<TwoDBetPage/>
        },
        {
-        path:'/2d/twodcomfirm',
+        path:'2d/twodcomfirm',
         element:<TwoDComfirm/>
        },
        {
-        path:'/2d/bet-history',
+        path:'2d/bet-history',
         element:<TwoDBetHistory/>
        },
        {
-        path:'/2d/winners',
+        path:'2d/winners',
         element:<TwoDWinners/>
        },
        {
-        path:'/2d/holiday',
+        path:'2d/holiday',
         element:<TwoDHoliday/>
        },
        {
-        path:'/3d/threeD',
+        path:'3d/threeD',
         element:<ThreeDPage/>
        },
        {
-        path:'/3d/winners',
+        path:'3d/winners',
         element:<ThreeDWinners/>
        },
        //3D မှတ်တမ်း
        {
-        path:'/3d/bet-history',
+        path:'3d/bet-history',
         element:<ThreeDBetHistoryPage/>
        },
         // 3D ထွက်ဂဏန်းများ
        {
-        path:'/3d/history',
+        path:'3d/history',
         element:<ThreeDHistoryPage/>
        },
        {
-        path:'/3d/bet',
+        path:'3d/bet',
         element:<ThreeDBetPage/>
        },
        {
-        path:'/3d/threedConfirm',
+        path:'3d/threedConfirm',
         element:<ThreeDConfirm/>
        },
 
        {
-        path:'/mepage',
+        path:'mepage',
         element:<MePage/>
        },
        {
-        path:'/profile',
+        path:'profile',
         element:<Profile/>
        },
        {
-        path:'/bet-history',
+        path:'bet-history',
         element:<BetHistory/>
        },
        {
-        path:'/result',
+        path:'result',
         element:<Result/>
        },
        {
-        path:'/bank',
+        path:'bank',
         element:<Bank/>
        },
        {
-        path:'/change-password',
+        path:'change-password',
         element:<ChangePassword/>
        }
       
     ]
   },
-  // For Slots Routes
+  // For Slots(/) Routes
   {
-    path: '/slots',
+    path: '/',
     element: <Layout />,
     children: [
       {
@@ -164,39 +165,39 @@ const router = createBrowserRouter([
         element: <HomeTabsPage />,
       },
       {
-        path:'user',
+        path:'slots/user',
         element:<HomePage/>
       },
       {
-        path: 'promotion',
+        path: 'slots/promotion',
         element: <PromotionPage />,
       },
       {
-        path: 'change-password',
+        path: 'slots/change-password',
         element: <ChangePasswordPage />,
       },
       {
-        path: 'play-history',
+        path: 'slots/play-history',
         element: <PlayHistoryPage />,
       },
       {
-        path: 'login',
+        path: 'slots/login',
         element: <LoginPage />,
       },
       {
-        path: 'register',
+        path: 'slots/register',
         element: <RegisterPage />,
       },
       {
-        path: 'topup',
+        path: 'slots/topup',
         element: <Topup />,
       },
       {
-        path: 'withdraw',
+        path: 'slots/withdraw',
         element: <Withdraw />,
       },
       {
-        path: 'transferlog',
+        path: 'slots/transferlog',
         element: <TransferLog />,
       },
     ],

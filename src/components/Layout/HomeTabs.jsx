@@ -30,13 +30,13 @@ import { NavLink } from 'react-router-dom';
 const HomeTabs = () => {
   const [searchParams]=useSearchParams();
     const tabs = [
-        {id:1,img:home,title:'home',link:'/slots'},
-        {id:2,img:casino,title:'casino',link:'/slots?tab=2'},
-        {id:3,img:lotto,title:'lotto',link:'/slots?tab=3'},
-        {id:4,img:slot,title:'slot',link:'/slots?tab=4'},
-        {id:5,img:sport,title:'sport',link:'/slots?tab=5'},
-        {id:6,img:viber,title:'viber',link:'/slots'},
-        {id:7,img:telegram,title:'telegram',link:'/slots'}
+        {id:1,img:home,title:'home',link:'?tab=1'},
+        {id:2,img:casino,title:'casino',link:'?tab=2'},
+        {id:3,img:lotto,title:'lotto',link:'/lotto'},
+        {id:4,img:slot,title:'slot',link:'?tab=4'},
+        {id:5,img:sport,title:'sport',link:'https://golden-horse-67e078.netlify.app/'},
+        {id:6,img:viber,title:'viber',link:'/'},
+        {id:7,img:telegram,title:'telegram',link:'/'}
     ];
     const casinoContents=[
       {id:1,img:bbincasino,title:'bbincasino'},

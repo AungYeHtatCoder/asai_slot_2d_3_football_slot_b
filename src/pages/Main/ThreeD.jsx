@@ -8,9 +8,9 @@ import { NavLink } from 'react-router-dom';
 
 const ThreeDPage = () => {
     const threeDSubNav=[
-        {id:1,icon:<FaClipboardList/>,title:'မှတ်တမ်း',link:'/3d/bet-history'},
-        {id:2,icon:<FaStar/>,title:'ကံထူးရှင်များ',link:'/3d/winners'},
-        {id:3,icon:<FaCalendarAlt/>,title:' ထွက်ဂဏန်းများ',link:'/3d/history'}
+        {id:1,icon:<FaClipboardList/>,title:'မှတ်တမ်း',link:'/lotto/3d/bet-history'},
+        {id:2,icon:<FaStar/>,title:'ကံထူးရှင်များ',link:'/lotto/3d/winners'},
+        {id:3,icon:<FaCalendarAlt/>,title:' ထွက်ဂဏန်းများ',link:'/lotto/3d/history'}
     ];
     const threeDListsArray=[
         {id:1,date:'16.11.2023',threeD:'970'},
@@ -27,7 +27,7 @@ const ThreeDPage = () => {
       <StartProfile amount1={0} amount2={0.00} timeLeftToClose={'10:20:00 AM'} />
       <DSubNav subNavArray={threeDSubNav} />
       <div className="text-center my-4">
-      <NavLink to={'/3d/bet'} > 
+      <NavLink to={'/lotto/3d/bet'} > 
         <Button className="twoDBetBtn rounded-2 py-2 px-4 text-white" variant="primary" >
             ထိုးမည်
         </Button>

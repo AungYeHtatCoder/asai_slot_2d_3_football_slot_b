@@ -9,11 +9,11 @@ import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
     const footerLinks=[
-        {id:1,title:'ပင်မ',link:'/',icon:<AiFillHome/>},
-        {id:2,title:'ပိုက်ဆံအိတ်',link:'/wallet',icon:<FaWallet/>},
-        {id:3,title:'ပရိုမိုးရှင်း',link:'/promotion',icon:<FaGift/>},
-        {id:4,title:'ဝန်ဆောင်မှုဖုန်း',link:'/service-phone',icon:<FaPhoneVolume/>},
-        {id:5,title:'ကျွန်ုပ်',link:'/mePage',icon:<FaUser/>},
+        {id:1,title:'ပင်မ',link:'/lotto/',icon:<AiFillHome/>},
+        {id:2,title:'ပိုက်ဆံအိတ်',link:'/lotto/wallet',icon:<FaWallet/>},
+        {id:3,title:'ပရိုမိုးရှင်း',link:'/lotto/promotion',icon:<FaGift/>},
+        {id:4,title:'ဝန်ဆောင်မှုဖုန်း',link:'/lotto/service-phone',icon:<FaPhoneVolume/>},
+        {id:5,title:'ကျွန်ုပ်',link:'/lotto/mePage',icon:<FaUser/>},
     ]
   return (
     <div className='mainFooter p-3 d-flex justify-content-between '>

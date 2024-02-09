@@ -14,10 +14,10 @@ import { NavLink } from 'react-router-dom';
 const Home = () => {
   const carousel=[h1,h2,h3];
   const btnLinks=[
-    {id:1,title:'2D',link:'/2d/twoD'},
-    {id:2,title:'3D',link:'/3d/threeD'},
-    {id:3,title:'ဘောလုံး',link:'/slots'},
-    {id:4,title:'စလော့',link:'/slots'},
+    {id:1,title:'2D',link:'/lotto/2d/twoD'},
+    {id:2,title:'3D',link:'/lotto/3d/threeD'},
+    {id:3,title:'ဘောလုံး',link:'https://golden-horse-67e078.netlify.app/login'},
+    {id:4,title:'စလော့',link:'/'},
   ]
   return (
     <div className='home px-2 px-sm-0 '>
