@@ -35,8 +35,8 @@ const HomeTabs = () => {
         {id:3,img:lotto,title:'lotto',link:'/lotto'},
         {id:4,img:slot,title:'slot',link:'?tab=4'},
         {id:5,img:sport,title:'sport',link:'/'},
-        {id:6,img:viber,title:'viber',link:'/'},
-        {id:7,img:telegram,title:'telegram',link:'/'}
+        // {id:6,img:viber,title:'viber',link:'/'},
+        // {id:7,img:telegram,title:'telegram',link:'/'}
     ];
     const casinoContents=[
       {id:1,img:bbincasino,title:'bbincasino'},
@@ -96,7 +96,7 @@ const HomeTabs = () => {
                     })}
                     </div>
                     </Tab.Pane> */}
-                    <Tab.Pane className='container ' eventKey={2}>
+                    {/* <Tab.Pane className='container ' eventKey={2}>
                     <div className="row">
                     {casinoContents.map((data)=>{
                       return <div className='col-5 col-sm-6 col-lg-4 col-xl-4 my-2 '>
@@ -105,7 +105,7 @@ const HomeTabs = () => {
                       </div>
                     })}
                     </div>
-                    </Tab.Pane>
+                    </Tab.Pane> */}
                     <Tab.Pane className='container ' eventKey={4}>
                     <div className="row">
                     {slotContents.map((data)=>{

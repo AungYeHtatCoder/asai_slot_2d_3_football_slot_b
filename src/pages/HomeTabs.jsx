@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../assets/css/tab.css';
 import Carouselslidetwo from './../components/Layout/Carouselslidetwo';
 // import fishbackground from '../../assets/img/fishbackground';
@@ -24,44 +24,57 @@ import slot1 from '../assets/img/game/slot1.png';
 import slot2 from '../assets/img/game/slot2.png';
 import sport1 from '../assets/img/game/sport1.png';
 import sport2 from '../assets/img/game/sport2.png';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import '../assets/css/tab.css'
 import { NavLink } from 'react-router-dom';
+import useFetch from '../hooks/useFetch';
+import BASE_URL from '../hooks/baseURL';
+
 const HomeTabs = () => {
+  const {data: slotGames, loading, error} = useFetch(BASE_URL+'/gameTypeProviders/4');
+  const {data: sportGames} = useFetch(BASE_URL+'/gameTypeProviders/3');
+  const {data: casinoGames} = useFetch(BASE_URL+'/gameTypeProviders/2');
+  const {data: hotGames} = useFetch(BASE_URL+'/hotgame');
+
   const [searchParams]=useSearchParams();
     const tabs = [
-      {id:1,img:home,title:'home',link:'?tab=1'},
-      {id:2,img:casino,title:'casino',link:'?tab=2'},
-      {id:3,img:lotto,title:'lotto',link:'/lotto'},
-      {id:4,img:slot,title:'slot',link:'?tab=4'},
-      {id:5,img:sport,title:'sport',link:'/'},
-      {id:6,img:viber,title:'viber',link:'/'},
-      {id:7,img:telegram,title:'telegram',link:'/'}
+      {id:1,img:home,title:'ALL',link:'?tab=1'},
+      {id:2,img:casino,title:'HOT',link:'?tab=2'},
+
+      {id:4,img:slot,title:'SLOT',link:'?tab=4'},
+      {id:5,img:sport,title:'SPORT BOOK',link:'?tab=5'},
+      {id:6,img:sport,title:'LIVE CASINO',link:'?tab=6'},
+
+      {id:3,img:lotto,title:'Lotto',link:'/lotto'},
+      // {id:6,img:viber,title:'viber',link:'/'},
+      // {id:7,img:telegram,title:'telegram',link:'/'}
     ];
-    const homeContents=[
-      {id:1,img:bbincasino,title:'bbincasino'},
-      {id:2,img:slot1,title:'slot1'},
-      {id:3,img:slot2,title:'slot2'},
-      {id:4,img:lotto1,title:'lotto1'},
-      {id:5,img:lotto3,title:'lotto3'},
-      {id:6,img:sport1,title:'sport1'},
-      {id:7,img:sport2,title:'sport2'}
-    ]
-    const casinoContents=[
-      {id:1,img:bbincasino,title:'bbincasino'},
-    ]
-    // const lottoContents=[
-    //   {id:1,img:lotto1,title:'lotto1'},
-    //   {id:2,img:lotto3,title:'lotto3'},
-    // ]
-    const slotContents=[
-      {id:1,img:slot1,title:'slot1'},
-      {id:2,img:slot2,title:'slot2'},
-    ]
-    // const sportContents=[
-    //   {id:1,img:sport1,title:'sport1'},
-    //   {id:2,img:sport2,title:'sport2'},
-    // ]
+
+    const [slotContents, setSlotContents] = useState("");
+    useEffect(() => {
+      setSlotContents(slotGames?.providers);
+    }, [slotGames])
+
+    const [sportContents, setSportContents] = useState("");
+    useEffect(() => {
+      setSportContents(sportGames?.providers);
+    }, [sportGames])
+
+    const [casinoContents, setCasinoContents] = useState("");
+    useEffect(() => {
+      setCasinoContents(casinoGames?.providers);
+    }, [casinoGames])
+
+    const [hotContents, setHotContents] = useState("");
+    useEffect(() => {
+      setHotContents(hotGames);
+    }, [hotGames])
+
+    console.log(hotContents);
+
+
+    // console.log(sportContents);
+
    
     
     return (
@@ -72,7 +85,7 @@ const HomeTabs = () => {
           <Nav variant="pills" className="flex-column  pt-4" style={{minHeight:'100vh'}}>
             <Nav.Item>
                 {tabs.map((tab) => {
-                    return <NavLink className='text-decoration-none ' to={tab.link}>
+                    return <NavLink key={tab.id} className='text-decoration-none ' to={tab.link}>
                     <Nav.Link href={tab.link} eventKey={tab.id} className='tabs'>
                     <img src={tab.img} alt="" className='tab-imgs'/>
                     <div className='ms-sm-3 ms-xs-1'>{tab.title}</div>
@@ -88,41 +101,88 @@ const HomeTabs = () => {
           <Carouselslidetwo></Carouselslidetwo>
           <div className='text-center mt-4 mt-lg-0'>
                     <h3 className='text-title'>
-                      {searchParams.get('tab')==1 ?  'Home': 
-                      searchParams.get('tab')==2 ?  'Casino': 
+                      {searchParams.get('tab')==1 ?  'All Games': 
+                      searchParams.get('tab')==2 ?  'Hot Games': 
                       searchParams.get('tab')==3 ?  'Lotto':
-                      searchParams.get('tab')==4 ?  'Slot': 
-                      searchParams.get('tab')==5 ?  'Sport':
-                      'Home'  
+                      searchParams.get('tab')==4 ?  'Slot Games': 
+                      searchParams.get('tab')==5 ?  'Sport Book':
+                      searchParams.get('tab')==6 ?  'Live Casino':
+                      'All Games'  
                       }
                     </h3>
                   </div>  
-                  <Tab.Pane className='container ' eventKey={1}>
+                    <Tab.Pane className='container-fluid ' eventKey={1}>
+                      <h4 className='fw-bold mt-5' style={{ color: 'goldenrod' }}>Slot Games</h4>
                     <div className="row">
-                    {homeContents.map((data)=>{
-                      return <div className='col-12 col-sm-6 col-lg-4 col-xl-4 my-2 '>
-                        <span>{data.title}</span>
-                        <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img} />
+                    {slotContents && slotContents.map((data)=>{
+                      return <Link to={'/games'} onClick={()=>{
+                        localStorage.removeItem("provider_id");
+                        localStorage.removeItem("gameType_id");
+                        localStorage.removeItem("title");
+                        localStorage.setItem("provider_id", data.id);
+                        localStorage.setItem("gameType_id", data.pivot.game_type_id);
+                        localStorage.setItem("title", data.description);
+                      }} key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 text-decoration-none text-white mb-5'>
+                        <span>{data.description}</span>
+                        <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img_url} />
+                      </Link>
+                    })}
+                    </div>
+                    <h4 className='fw-bold mt-5' style={{ color: 'goldenrod' }}>Sport Books</h4>
+                    <div className="row">
+                    {sportContents && sportContents.map((data)=>{
+                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 '>
+                        <span>{data.description}</span>
+                        <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img_url} />
+                      </div>
+                    })}
+                    </div>
+                    <h4 className='fw-bold mt-5' style={{ color: 'goldenrod' }}>Live Casino</h4>
+                    <div className="row">
+                    {casinoContents && casinoContents.map((data)=>{
+                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 '>
+                        <span>{data.description}</span>
+                        <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img_url} />
                       </div>
                     })}
                     </div>
                     </Tab.Pane>
-                    <Tab.Pane className='container ' eventKey={2}>
+                    <Tab.Pane className='container-fluid ' eventKey={2}>
                     <div className="row">
-                    {casinoContents.map((data)=>{
-                      return <div className='col-12 col-sm-6  col-lg-4 col-xl-4 my-2 '>
-                        <span>{data.title}</span>
-                        <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img} />
+                    {hotContents && hotContents.map((data)=>{
+                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-4 '>
+                        <span className='mb-3 d-block' style={{ fontSize: '14px'}}>{data.name_en}</span>
+                        <img style={{width:'100%',height:'200px'}} className='rounded' src={data.img_url} />
                       </div>
                     })}
                     </div>
                     </Tab.Pane>
-                    <Tab.Pane className='container ' eventKey={4}>
+                    <Tab.Pane className='container-fluid ' eventKey={4}>
                     <div className="row">
-                    {slotContents.map((data)=>{
-                      return <div className='col-12 col-sm-6  col-lg-4 col-xl-4 my-2 '>
-                        <span>{data.title}</span>
-                        <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img} />
+                    {slotContents && slotContents.map((data)=>{
+                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 '>
+                        <span>{data.description}</span>
+                        <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img_url} />
+                      </div>
+                    })}
+                    </div>
+                    </Tab.Pane>
+                    <Tab.Pane className='container-fluid ' eventKey={5}>
+                    <div className="row">
+                    {sportContents && sportContents.map((data)=>{
+                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 '>
+                        <span>{data.description}</span>
+                        <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img_url} />
+                      </div>
+                    })}
+                    </div>
+                    </Tab.Pane>
+                    <Tab.Pane className='container-fluid ' eventKey={6}>
+                    <div className="row">
+                    {casinoContents && casinoContents.map((data)=>{
+                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 '>
+                        <span>{data.description}</span>
+                        <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img_url} />
                       </div>
                     })}
                     </div>
