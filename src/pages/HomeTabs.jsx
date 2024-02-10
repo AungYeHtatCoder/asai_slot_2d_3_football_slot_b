@@ -70,11 +70,31 @@ const HomeTabs = () => {
       setHotContents(hotGames);
     }, [hotGames])
 
-    console.log(hotContents);
-
-
-    // console.log(sportContents);
-
+    const launchGame = (gameId) => {
+      //fetch api calling
+      fetch(BASE_URL + "/launchGame/" + gameId, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + localStorage.getItem("authToken"),
+        },
+      })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Launch Game failed");
+        }
+        console.log("Launch Game success");
+        return response.json();
+      })
+      .then((data) => {
+        // console.log(data.data);
+        window.location.href = data.data;
+      })
+      .catch((error) => {
+        console.error("Launch Game error:", error);
+      });
+    }
    
     
     return (
@@ -131,7 +151,7 @@ const HomeTabs = () => {
                     <h4 className='fw-bold mt-5' style={{ color: 'goldenrod' }}>Sport Books</h4>
                     <div className="row">
                     {sportContents && sportContents.map((data)=>{
-                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 '>
+                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 ' onClick={() => launchGame(data.id)} style={{ cursor: "pointer" }}>
                         <span>{data.description}</span>
                         <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img_url} />
                       </div>
@@ -140,7 +160,7 @@ const HomeTabs = () => {
                     <h4 className='fw-bold mt-5' style={{ color: 'goldenrod' }}>Live Casino</h4>
                     <div className="row">
                     {casinoContents && casinoContents.map((data)=>{
-                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 '>
+                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 ' onClick={() => launchGame(data.id)} style={{ cursor: "pointer" }}>
                         <span>{data.description}</span>
                         <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img_url} />
                       </div>
@@ -150,7 +170,7 @@ const HomeTabs = () => {
                     <Tab.Pane className='container-fluid ' eventKey={2}>
                     <div className="row">
                     {hotContents && hotContents.map((data)=>{
-                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-4 '>
+                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-4 ' onClick={() => launchGame(data.id)} style={{ cursor: "pointer" }}>
                         <span className='mb-3 d-block' style={{ fontSize: '14px'}}>{data.name_en}</span>
                         <img style={{width:'100%',height:'200px'}} className='rounded' src={data.img_url} />
                       </div>
@@ -160,17 +180,24 @@ const HomeTabs = () => {
                     <Tab.Pane className='container-fluid ' eventKey={4}>
                     <div className="row">
                     {slotContents && slotContents.map((data)=>{
-                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 '>
+                      return <Link to={'/games'} onClick={()=>{
+                        localStorage.removeItem("provider_id");
+                        localStorage.removeItem("gameType_id");
+                        localStorage.removeItem("title");
+                        localStorage.setItem("provider_id", data.id);
+                        localStorage.setItem("gameType_id", data.pivot.game_type_id);
+                        localStorage.setItem("title", data.description);
+                      }} key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 text-decoration-none text-white mb-5'>
                         <span>{data.description}</span>
                         <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img_url} />
-                      </div>
+                      </Link>
                     })}
                     </div>
                     </Tab.Pane>
                     <Tab.Pane className='container-fluid ' eventKey={5}>
                     <div className="row">
                     {sportContents && sportContents.map((data)=>{
-                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 '>
+                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 ' onClick={() => launchGame(data.id)} style={{ cursor: "pointer" }}>
                         <span>{data.description}</span>
                         <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img_url} />
                       </div>
@@ -180,7 +207,7 @@ const HomeTabs = () => {
                     <Tab.Pane className='container-fluid ' eventKey={6}>
                     <div className="row">
                     {casinoContents && casinoContents.map((data)=>{
-                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 '>
+                      return <div key={data.id} className='col-6 col-sm-6 col-lg-4 col-xl-3 my-2 ' onClick={() => launchGame(data.id)} style={{ cursor: "pointer" }}>
                         <span>{data.description}</span>
                         <img style={{width:'100%',height:'100%'}} className='rounded object-fit-contain ' src={data.img_url} />
                       </div>
