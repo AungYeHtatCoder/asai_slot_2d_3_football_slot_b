@@ -10,6 +10,30 @@ export default function Games() {
     
     const {data:games, loading, error} = useFetch(BASE_URL + "/gamedetail/" + providerId + "/game_type/" + gameTypeId);
     // console.log(games);
+    const launchGame = (gameId) => {
+      //fetch api calling
+      fetch(BASE_URL + "/launchGame/" + gameId, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + localStorage.getItem("authToken"),
+        },
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Launch Game failed");
+          }
+          console.log("Launch Game success");
+          return response.json();
+        })
+        .then((data) => {
+          window.location.href = data.data;
+        })
+        .catch((error) => {
+          console.error("Launch Game error:", error);
+        });
+    };
   return (
     <>
     <div className="container-fluid my-5">
