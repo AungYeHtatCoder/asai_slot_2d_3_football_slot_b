@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <footer className='px-2 px-sm-5 py-2 rounded-top-5 d-flex justify-content-between align-items-center d-lg-none'>
       {footerAfterLogin.map(item=>{
-        return <NavLink className={`${item.isMiddle ? 'middleIcon' :' '} text-decoration-none text-center text-light `} to={item.link}>
+        return <NavLink key={item.id} className={`${item.isMiddle ? 'middleIcon' :' '} text-decoration-none text-center text-light `} to={item.link}>
           <img  src={item.img} />
           <p>{item.title}</p>
         </NavLink>

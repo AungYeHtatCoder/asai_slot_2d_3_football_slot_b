@@ -1,4 +1,3 @@
-
 import React from 'react';
 import '../../assets/css/navbar.css';
 import logo from '../../assets/img/logo.png';
@@ -19,8 +18,8 @@ const Navbar = () => {
   const navs = [
     { id: 1, img: home, title: 'အိမ်', link: '/' },
     { id: 2, img: promotion, title: 'ပရိုမိုးရှင်း', link: '/slots/promotion' },
-    { id: 3, img: viber, title: 'Viber', link: '/' },
-    { id: 4, img: tele, title: 'Telegram', link: '/' },
+    // { id: 3, img: viber, title: 'Viber', link: '/' },
+    // { id: 4, img: tele, title: 'Telegram', link: '/' },
   ];
 
 
@@ -71,7 +70,7 @@ const Navbar = () => {
   // ];
 
   const sidebars = [ 
-    {id:1,font:'',title:'ဂိမ်းအားလုံး',link:'/'},
+    {id:1,font:'fa-solid fa-gamepad',title:'ဂိမ်းအားလုံး',link:'/'},
     {id:2,font:'fa-solid fa-building-columns',title:'ငွေသွင်းရန်',link:'/slots/topup'},
     {id:3,font:'fa-solid fa-clipboard-list',title:'ငွေသွင်းငွေထုတ်စာရင်း',link:'/slots/transferlog'},
     {id:4,font:'fa-solid fa-gamepad',title:'ဂိမ်မှတ်တမ်း',link:'/slots/play-history'},
@@ -94,7 +93,7 @@ const Navbar = () => {
           onClick={handleShow}
           className='bg-transparent'
         >
-          <i class='fa-solid fa-bars'></i>
+          <i className='fa-solid fa-bars'></i>
         </Button>
       <NavLink to={'/'}>
         <img src={logo} />
@@ -106,6 +105,7 @@ const Navbar = () => {
           {navs.map((nav) => {
             return (
               <NavLink
+              key={nav.id}
                 style={{
                   background: '#2D2D2D',
                   border: '2px solid #431F76',
@@ -125,9 +125,9 @@ const Navbar = () => {
         <NavLink to={'/slots/login'}>
           <button className=' navLoginBtn'>လော့ဂ်အင်</button>
         </NavLink>
-        <NavLink to={'/slots/register'}>
+        {/* <NavLink to={'/slots/register'}>
           <button className='navRegisterBtn'>မှတ်ပုံတင်</button>
-        </NavLink>
+        </NavLink> */}
       </div>
 
       <Offcanvas
@@ -145,7 +145,7 @@ const Navbar = () => {
           <ul style={{ listStyleType: 'none' }}>
             {sidebars.map((sidebar) => {
               return (
-                <li className='my-4 fw-bold' style={{ fontSize: '16px' }}>
+                <li className='my-4 fw-bold' key={sidebar.id} style={{ fontSize: '16px' }}>
                   <Link
                     to={sidebar.link}
                     id={sidebar.id}

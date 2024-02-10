@@ -37,6 +37,7 @@ import ThreeDBetHistoryPage from '../pages/Main/ThreeDBetHistory';
 import Login from '../pages/Main/Login'
 import TwoDComfirm from '../pages/Main/TwoDComfirm';
 import ThreeDConfirm from '../pages/Main/ThreeDConfirm';
+import Games from '../pages/Games';
 
 const router = createBrowserRouter([
   // For Lotto(2d,3d) Routes (*Import from Main folder*)
@@ -163,6 +164,10 @@ const router = createBrowserRouter([
       {
         index:true,
         element: <HomeTabsPage />,
+      },
+      {
+        path: 'games',
+        element: <Games />,
       },
       {
         path:'slots/user',
