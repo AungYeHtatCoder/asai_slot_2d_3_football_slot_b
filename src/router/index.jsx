@@ -38,6 +38,7 @@ import Login from '../pages/Main/Login'
 import TwoDComfirm from '../pages/Main/TwoDComfirm';
 import ThreeDConfirm from '../pages/Main/ThreeDConfirm';
 import Games from '../pages/Games';
+import SlotWalletPage from '../pages/Wallet';
 
 const router = createBrowserRouter([
   // For Lotto(2d,3d) Routes (*Import from Main folder*)
@@ -194,17 +195,21 @@ const router = createBrowserRouter([
         element: <RegisterPage />,
       },
       {
-        path: 'slots/topup',
-        element: <Topup />,
+        path: 'slots/wallet',
+        element: <SlotWalletPage />,
       },
-      {
-        path: 'slots/withdraw',
-        element: <Withdraw />,
-      },
-      {
-        path: 'slots/transferlog',
-        element: <TransferLog />,
-      },
+      // {
+      //   path: 'slots/topup',
+      //   element: <Topup />,
+      // },
+      // {
+      //   path: 'slots/withdraw',
+      //   element: <Withdraw />,
+      // },
+      // {
+      //   path: 'slots/transferlog',
+      //   element: <TransferLog />,
+      // },
     ],
   },
 

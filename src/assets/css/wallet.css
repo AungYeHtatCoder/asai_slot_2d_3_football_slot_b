@@ -1,0 +1,9 @@
+.gamingPrices{
+    width: auto;
+}
+@media screen and (max-width:980px) {
+    .gamingPrices,.walletForms{
+        width: 100%;
+    }
+    
+}
