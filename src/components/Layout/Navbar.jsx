@@ -71,11 +71,12 @@ const Navbar = () => {
 
   const sidebars = [ 
     {id:1,font:'fa-solid fa-gamepad',title:'ဂိမ်းအားလုံး',link:'/'},
-    {id:2,font:'fa-solid fa-building-columns',title:'ငွေသွင်းရန်',link:'/slots/topup'},
-    {id:3,font:'fa-solid fa-clipboard-list',title:'ငွေသွင်းငွေထုတ်စာရင်း',link:'/slots/transferlog'},
-    {id:4,font:'fa-solid fa-gamepad',title:'ဂိမ်မှတ်တမ်း',link:'/slots/play-history'},
-    {id:5,font:'fa-solid fa-user-pen',title:'လျှိ့ဝှက်နံပါတ်ပြောင်းရန်',link:'/slots/change-password'},
-    {id:6,font:'fa-solid fa-coins',title:'ငွေထုတ်ရန်',link:'/slots/withdraw'},
+    // {id:2,font:'fa-solid fa-building-columns',title:'ငွေသွင်းရန်',link:'/slots/topup'},
+    // {id:3,font:'fa-solid fa-clipboard-list',title:'ငွေသွင်းငွေထုတ်စာရင်း',link:'/slots/transferlog'},
+    {id:4,font:'fa-solid fa-gamepad',title:'ဂိမ်းမှတ်တမ်း',link:'/slots/play-history'},
+    {id:5,font:'fa-solid fa-wallet',title:'ပိုက်ဆံအိတ်',link:'/slots/wallet'},
+    {id:6,font:'fa-solid fa-user-pen',title:'လျှိ့ဝှက်နံပါတ်ပြောင်းရန်',link:'/slots/change-password'},
+    // {id:6,font:'fa-solid fa-coins',title:'ငွေထုတ်ရန်',link:'/slots/withdraw'},
     // {id:7,font:'fa-solid fa-file-invoice',title:'ငွေသွင်း/ထုတ်မှတ်တမ်း',link:'/'},
     {id:7,font:'fa-solid fa-arrow-right-from-bracket',title:'ထွက်ရန်',link:'/'},
   ]
