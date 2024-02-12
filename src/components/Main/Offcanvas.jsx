@@ -126,7 +126,7 @@ function OffcanvasBottom({selectedNumbers,setSelectedNumbers}) {
         အမြန်ရွေး
       </Button>
 
-      <Offcanvas show={show} onHide={handleClose} placement="bottom"  style={{height:'100vh'}}>
+      <Offcanvas show={show} onHide={handleClose} placement="bottom"  style={{height:'70vh'}}>
         <Offcanvas.Header closeButton >
           <Offcanvas.Title>အမြန်ရွေး</Offcanvas.Title>
         </Offcanvas.Header>
