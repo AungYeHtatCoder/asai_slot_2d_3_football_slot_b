@@ -57,7 +57,7 @@ function Offcanvas3D() {
       အမြန်ရွေး
       </Button>
 
-      <Offcanvas style={{height:'100vh'}} placement='bottom' show={show} onHide={handleClose}>
+      <Offcanvas style={{height:'70vh'}} placement='bottom' show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title></Offcanvas.Title>
         </Offcanvas.Header>
