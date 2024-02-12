@@ -117,35 +117,20 @@ const BetHistory = ()=>{
                     <p >{data.value} <span>-</span>{data.amount} </p>
                 </div>
             ))
-            // TwoDHistory.map((twod)=>{
-            //     return <div className="my-3" style={{backgroundColor:'rgba(102, 0, 149, 1)'}}>
-            //         <p className="text-center fw-bold">{twod.date}</p>
-            //         <div>
-            //         <div className="d-flex justify-content-around align-items-start row">
-            //             {
-            //                 userTwodData.map((index,data)=>{
-            //                     return <>
-            //                     <div className="col-6">
-            //                             <p class="text-center fw-bold">{data.time}</p>
-            //                         </div>
-
-            //                         <div className="col-6">
-            //                             <p>{data.value}</p>
-            //                             <p>{data.amount}</p>
-            //                         </div>
-            //                         <hr/>
-            //                     </>
-            //                 })
-            //             }
-                        
-            //             </div>
-            //         </div>
-            //     </div>
-            // })
+            
         }
         </div>
       </Tab>
       <Tab eventKey="ThreeD" title="3D  ထီထိုးမှတ်တမ်း">
+            <div className="m-3 p-3" style={{backgroundColor:'rgba(102, 0, 149, 1)'}}>
+                <div className="d-flex justify-content-around align-items-start ">
+                    <div>
+                        <p className="fw-bold">Date</p>
+                    </div>
+                    <div>
+                        <h6 className="fw-bold">3D - Amount</h6>
+                    </div>
+                </div>
             {
                 userThreedData.map((data)=>{
                     return  <>
@@ -159,6 +144,7 @@ const BetHistory = ()=>{
                     </>
                 })
             }
+            </div>
       </Tab>
       
     </Tabs>
