@@ -3,74 +3,14 @@ import { Button, Table } from 'react-bootstrap'
 import { IoMdRepeat } from 'react-icons/io'
 import { NavLink } from 'react-router-dom'
 import { AppContext } from '../../components/Main/MainLayout'
-function threeDAllR(inputArray) {
-    const resultArray = [];
 
-    // Function to reverse the characters of a string while preserving leading zeros
-    function reverseStringWithLeadingZeros(str) {
-        const reversedString = str.split("").reverse().join("");
-        return reversedString;
-    }
-
-    // Ensure unique strings and transform each
-    const uniqueStrings = [...new Set(inputArray)];
-
-    uniqueStrings.forEach(str => {
-        // Include the original string with leading zeros if necessary
-        resultArray.push(str);
-
-        // Include the reversed string if it's different from the original
-        const reversedString = reverseStringWithLeadingZeros(str);
-
-        // Ensure that reversed '000' is '000' and handle duplicates like '101'
-        if (str !== reversedString) {
-            resultArray.push(reversedString);
-
-            // Include reversed forms starting with '0' for strings that originally start with '0'
-            if (str.startsWith('0')) {
-                const reversedWithZero = reverseStringWithLeadingZeros(reversedString);
-
-                // Include the reversed form with '0' even if it's the same as the original
-                if (!resultArray.includes(reversedWithZero)) {
-                    resultArray.push(reversedWithZero);
-                }
-            }
-        }
-    });
-
-    // Additional reversed forms by permuting the digits
-    for (let i = 0; i < uniqueStrings.length; i++) {
-        const str = uniqueStrings[i];
-        const visited = Array(str.length).fill(false);
-        permute(str, '', visited);
-    }
-
-    // Function to generate all permutations of a string
-    function permute(str, current, visited) {
-        if (current.length === str.length) {
-            if (!resultArray.includes(current)) {
-                resultArray.push(current);
-            }
-            return;
-        }
-
-        for (let i = 0; i < str.length; i++) {
-            if (!visited[i]) {
-                visited[i] = true;
-                permute(str, current + str[i], visited);
-                visited[i] = false;
-            }
-        }
-    }
-
-    return resultArray.sort(); // Sort the array to ensure the desired order
-}
 const ThreeDConfirm = () => {
     const {threeDSelectedNumbers,setThreeDSelectedNumbers,
         userThreedData,setUserThreedData}=useContext(AppContext);
         const [total,setTotal]=useState('0');
         const allRHandler=()=>{
-            const numbersToAdd=threeDAllR(threeDSelectedNumbers);
+            const numbersToAdd=[];
+            // const numbersToAdd=threeDAllR(threeDSelectedNumbers);
            numbersToAdd.map((n)=>{
             if(!threeDSelectedNumbers.includes(n)){
                 setThreeDSelectedNumbers((prev)=>[...prev,n]);
@@ -197,3 +137,4 @@ const ThreeDConfirm = () => {
 }
 
 export default ThreeDConfirm
+
