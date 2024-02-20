@@ -10,6 +10,18 @@
     justify-content: start;
     align-items: center;
 }
+.gameImg{
+    height: 100px;
+    width: 200px;
+}
+.hotGameImg{
+    height:200px;
+}
+@media screen and (min-width:980px) and (max-width:1030px) {
+    .hotGameImg{
+        height:200px;
+    }
+}
 
 @media screen and (max-width:900px){
     .tabs{
@@ -42,10 +54,36 @@
         width: 110px;
     }
 }
+@media screen and (max-width:500px) {
+    .hotGameImg{
+        height: 100px;
+        
+    }
+}
+@media screen and (max-width:490px) {
+    .gameImg{
+        height: 80px;
+        width: 100%;
+    }
+}
 @media screen and (max-width:390px){
     .tabs{
         height: 50px;
     }
+
+        .gameImg{
+            height: 70px;
+        } 
+}
+@media screen and (max-width:350px){
+    .tabs{
+        width: 100px;
+    }
+}
+@media screen and (max-width:320px) {
+    .gameImg{
+        height: 60px;
+    } 
 }
 @media screen and (max-width:300px) {
     .nav-link{
