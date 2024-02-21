@@ -167,6 +167,10 @@ const router = createBrowserRouter([
         element: <HomeTabsPage />,
       },
       {
+        path:'service-phone',
+         element: <ServicePhone />,
+       },
+      {
         path: 'games',
         element: <Games />,
       },

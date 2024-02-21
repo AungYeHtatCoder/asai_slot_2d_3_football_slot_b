@@ -26,7 +26,7 @@ const Footer = () => {
     // ]
     const footerLinks=[
       {id:1,img:home,link:'/lotto/',title:"အိမ်"},
-      {id:2,img:deposit,link:'/lotto/wallet',title:"ပိုက်ဆံအိတ်"},
+      {id:2,img:deposit,link:'/slots/wallet',title:"ပိုက်ဆံအိတ်"},
       {id:3,img:menu,link:'/lotto/',title:"",isMiddle:true},
       {id:4,img:viber,link:'/lotto/service-phone',title:"ဝန်ဆောင်မှုဖုန်း"},
       {id:5,img:profile,link:'/lotto/mePage',title:"ကျွန်ုပ်"},
