@@ -24,8 +24,12 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    margin: auto;
 }
-
+.middleIcon{
+    width: 55px;
+    height: 55px;
+}
 @media screen and (min-width:765px) {
     .layout,.mainBody{
         width: 375px;

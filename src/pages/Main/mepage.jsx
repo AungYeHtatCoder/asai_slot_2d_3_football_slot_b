@@ -9,9 +9,9 @@ import result from '../../assets/img/Main/profile/result.png';
 
 const mepage = ()=>{
     const links = [
-        {
-            id:1,img:'',title:'profile',link:'/lotto/profile'
-        },
+        // {
+        //     id:1,img:'',title:'profile',link:'/lotto/profile'
+        // },
         {
             id:2,img:bethistory,title:'ထီထိုးမှတ်တမ်း',link:'/lotto/bet-history'
         },
@@ -21,12 +21,12 @@ const mepage = ()=>{
         {
             id:4,img:bank,title:'ဘဏ်အကောင့်များ',link:'/lotto/bank'
         },
-        {
-            id:5,img:password,title:'လျှို့ဝှက်နံပါတ်ပြောင်းရန်',link:'/lotto/change-password'
-        },
-        {
-            id:6,img:logout,title:'ထွက်ခွာရန်'
-        }
+        // {
+        //     id:5,img:password,title:'လျှို့ဝှက်နံပါတ်ပြောင်းရန်',link:'/lotto/change-password'
+        // },
+        // {
+        //     id:6,img:logout,title:'ထွက်ခွာရန်'
+        // }
     ]
     return <>
     <div>

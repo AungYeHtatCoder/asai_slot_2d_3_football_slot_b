@@ -73,7 +73,12 @@ const Navbar = () => {
   // ];
 
   const sidebars = [
-    { id: 1, font: "fa-solid fa-gamepad", title: "ဂိမ်းအားလုံး", link: "/" },
+    {
+      id: 1,
+      font: "fa-solid fa-gamepad",
+      title: "ဂိမ်းအားလုံး",
+      link: "/?tab=1",
+    },
     // {id:2,font:'fa-solid fa-building-columns',title:'ငွေသွင်းရန်',link:'/slots/topup'},
     // {id:3,font:'fa-solid fa-clipboard-list',title:'ငွေသွင်းငွေထုတ်စာရင်း',link:'/slots/transferlog'},
     {
