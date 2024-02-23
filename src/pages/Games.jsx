@@ -1,43 +1,49 @@
-import React from 'react'
-import useFetch from '../hooks/useFetch'
-import BASE_URL from '../hooks/baseURL'
+import React from "react";
+import useFetch from "../hooks/useFetch";
+import BASE_URL from "../hooks/baseURL";
 
 export default function Games() {
-    let providerId = localStorage.getItem("provider_id");
-    let gameTypeId = localStorage.getItem("gameType_id");
-    let auth = localStorage.getItem("authToken");
-    let gameTitle = localStorage.getItem("title");
-    
-    const {data:games, loading, error} = useFetch(BASE_URL + "/gamedetail/" + providerId + "/game_type/" + gameTypeId);
-    // console.log(games);
-    const launchGame = (gameId) => {
-      //fetch api calling
-      fetch(BASE_URL + "/launchGame/" + gameId, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + localStorage.getItem("authToken"),
-        },
+  let providerId = localStorage.getItem("provider_id");
+  let gameTypeId = localStorage.getItem("gameType_id");
+  let auth = localStorage.getItem("authToken");
+  let gameTitle = localStorage.getItem("title");
+  console.log(providerId);
+  const {
+    data: games,
+    loading,
+    error,
+  } = useFetch(
+    BASE_URL + "/gamedetail/" + providerId + "/game_type/" + gameTypeId
+  );
+  // console.log(games);
+  const launchGame = (gameId) => {
+    //fetch api calling
+    fetch(BASE_URL + "/launchGame/" + gameId, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("authToken"),
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Launch Game failed");
+        }
+        console.log("Launch Game success");
+        return response.json();
       })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Launch Game failed");
-          }
-          console.log("Launch Game success");
-          return response.json();
-        })
-        .then((data) => {
-          window.location.href = data.data;
-        })
-        .catch((error) => {
-          console.error("Launch Game error:", error);
-        });
-    };
+      .then((data) => {
+        window.location.href = data.data;
+      })
+      .catch((error) => {
+        console.error("Launch Game error:", error);
+      });
+  };
   return (
     <>
-    <div className="container-fluid my-5">
-        <h3 className='text-center mb-5 fw-bold'>{gameTitle}</h3>
+      <div className="container-fluid my-5">
+        <h3 className="text-center mb-5 fw-bold">{gameTitle}</h3>
         <div className="row">
           {games &&
             games.map((game, index) => (
@@ -75,5 +81,5 @@ export default function Games() {
         </div>
       </div>
     </>
-  )
+  );
 }
