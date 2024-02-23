@@ -82,6 +82,12 @@ const Navbar = () => {
     // {id:2,font:'fa-solid fa-building-columns',title:'ငွေသွင်းရန်',link:'/slots/topup'},
     // {id:3,font:'fa-solid fa-clipboard-list',title:'ငွေသွင်းငွေထုတ်စာရင်း',link:'/slots/transferlog'},
     {
+      id: 3,
+      font: "fa-solid fa-user",
+      title: "အကောင့်",
+      link: "/profile",
+    },
+    {
       id: 4,
       font: "fa-solid fa-gamepad",
       title: "ဂိမ်းမှတ်တမ်း",
@@ -91,7 +97,7 @@ const Navbar = () => {
       id: 5,
       font: "fa-solid fa-wallet",
       title: "ပိုက်ဆံအိတ်",
-      link: "/slots/wallet",
+      link: "/wallet",
     },
     {
       id: 6,
