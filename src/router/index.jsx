@@ -39,8 +39,10 @@ import TwoDComfirm from '../pages/Main/TwoDComfirm';
 import ThreeDConfirm from '../pages/Main/ThreeDConfirm';
 import Games from '../pages/Games';
 import SlotWalletPage from '../pages/Wallet';
+import ProfilePage from '../pages/Profile';
 
 const router = createBrowserRouter([
+ 
   // For Lotto(2d,3d) Routes (*Import from Main folder*)
   {
     path:'/lotto',
@@ -57,7 +59,7 @@ const router = createBrowserRouter([
 
       {
         path:'wallet',
-         element: <WalletPage />,
+         element: <SlotWalletPage />,
        },
        {
         path:'top-up',
@@ -167,6 +169,10 @@ const router = createBrowserRouter([
         element: <HomeTabsPage />,
       },
       {
+        path:'profile',
+         element: <ProfilePage />,
+       },
+      {
         path:'service-phone',
          element: <ServicePhone />,
        },
@@ -199,9 +205,10 @@ const router = createBrowserRouter([
         element: <RegisterPage />,
       },
       {
-        path: 'slots/wallet',
-        element: <SlotWalletPage />,
-      },
+        path:'wallet',
+         element: <SlotWalletPage />,
+       },
+      
       // {
       //   path: 'slots/topup',
       //   element: <Topup />,

@@ -22,7 +22,7 @@ const Footer = () => {
   ];
   const footerAfterLogin=[
     {id:1,img:home,link:'/',title:"အိမ်"},
-    {id:2,img:deposit,link:'/slots/wallet',title:"ပိုက်ဆံအိတ်"},
+    {id:2,img:deposit,link:'/wallet',title:"ပိုက်ဆံအိတ်"},
     {id:3,img:menu,link:'/',title:"",isMiddle:true},
     {id:4,img:viber,link:'/service-phone',title:"ဝန်ဆောင်မှုဖုန်း"},
     {id:5,img:promotion2,link:'/slots/promotion',title:"ပရိုမိုးရှင်း"},
