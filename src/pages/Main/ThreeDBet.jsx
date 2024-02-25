@@ -13,6 +13,7 @@ const ThreeDBetPage = () => {
   const {threeDSelectedNumbers,setThreeDSelectedNumbers,
     userThreedData,setUserThreedData}=useContext(AppContext);
   const [selectedDigits, setSelectedDigits] = useState('000');
+  const [threeDInput,setThreeDInput]=useState('');
   const [inputPrize,setInputPrize] = useState('100');
 
   const handleSelectChange = () => {
@@ -37,6 +38,7 @@ const ThreeDBetPage = () => {
     setThreeDSelectedNumbers([...threeDSelectedNumbers,selectedDigits])
    }
   }
+  
   const editBet=(betId)=>{
     setUserThreedData(userThreedData.map((item)=>{
        if(item.id===betId) item={...item,isAmountEdit:!item.isAmountEdit}
@@ -61,23 +63,27 @@ const ThreeDBetPage = () => {
     }))
   }
  
+  // useEffect(()=>{
+  //   console.log('userThreedData',userThreedData.length)
+  // },[userThreedData]);
   useEffect(()=>{
-    console.log('userThreedData',userThreedData.length)
-  },[userThreedData])
+    setSelectedDigits(threeDInput);
+  },[threeDInput])
   
   
   return (
     <div>
       <StartProfile amount1={0} amount2={0.00} timeLeftToClose={'10:20:00 AM'} />
-      <div className='d-flex justify-content-between mt-4'>
+      
+      <div className="px-3 px-sm-0">
+      <div className='d-flex flex-wrap flex-sm-nowrap justify-content-between mt-4'>
+        <div>
         <div className='d-flex' style={{fontSize:'14px'}}>
           <p >ထိပ်စီး</p>
           <p className='mx-2'>အလယ်</p>
           <p>နောက်ပိတ်</p>
         </div>
-        <p className='me-5'>ထိုးငွေ</p>
-      </div>
-      <div className='d-flex justity-content-center'>
+        <div className='d-flex justity-content-center'>
         <select name="first" id="first" className=' px-1 rounded border-none' onChange={handleSelectChange}>
           {
             firsts.map((first)=>{
@@ -99,8 +105,16 @@ const ThreeDBetPage = () => {
             })
           }
         </select>
-        <input type="text" className='px-1 rounded w-50' id='kyatprize' placeholder='at least 100 kyats' value={inputPrize} onChange={handleInputPrize}/>
+        
       </div>
+        </div>
+        <input className=' px-1 rounded w-sm-50  ' style={{height:'35px',marginTop:'30px',fontSize:'13px'}} placeholder='စာရိုက်ပြီး ဂဏန်းရွေးမည်' value={threeDInput} onChange={(e)=>setThreeDInput(e.target.value.trim())} />
+      </div>
+      <p className="mt-2 text-sm">ထိုးငွေ</p>
+      <input type="text" className='px-1 rounded w-50' id='kyatprize' placeholder='at least 100 kyats' value={inputPrize} onChange={handleInputPrize}/>
+      </div>
+      
+      
           <div className="text-center my-4">
           <Offcanvas3D/>
           <>
